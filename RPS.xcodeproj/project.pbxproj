@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345B093423C669B800B4E03A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B093323C669B800B4E03A /* MenuViewController.swift */; };
+		3495E68223CB496A0023C7FC /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495E68123CB496A0023C7FC /* SummaryViewController.swift */; };
 		34C78EB923C4FDC2008C30D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C78EB823C4FDC2008C30D8 /* AppDelegate.swift */; };
 		34C78EBB23C4FDC2008C30D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C78EBA23C4FDC2008C30D8 /* SceneDelegate.swift */; };
-		34C78EBD23C4FDC2008C30D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C78EBC23C4FDC2008C30D8 /* ViewController.swift */; };
+		34C78EBD23C4FDC2008C30D8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C78EBC23C4FDC2008C30D8 /* GameViewController.swift */; };
 		34C78EC023C4FDC2008C30D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C78EBE23C4FDC2008C30D8 /* Main.storyboard */; };
 		34C78EC223C4FDC3008C30D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C78EC123C4FDC3008C30D8 /* Assets.xcassets */; };
 		34C78EC523C4FDC3008C30D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C78EC323C4FDC3008C30D8 /* LaunchScreen.storyboard */; };
+		34D361F723C67757001E0BDC /* ModesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D361F623C67757001E0BDC /* ModesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		34C78EB523C4FDC2008C30D8 /* RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		345B093323C669B800B4E03A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3495E68123CB496A0023C7FC /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		34C78EB523C4FDC2008C30D8 /* RPS: Ultimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPS: Ultimate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C78EB823C4FDC2008C30D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C78EBA23C4FDC2008C30D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		34C78EBC23C4FDC2008C30D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34C78EBC23C4FDC2008C30D8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		34C78EBF23C4FDC2008C30D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34C78EC123C4FDC3008C30D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34C78EC423C4FDC3008C30D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34C78EC623C4FDC3008C30D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D361F623C67757001E0BDC /* ModesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +54,7 @@
 		34C78EB623C4FDC2008C30D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				34C78EB523C4FDC2008C30D8 /* RPS.app */,
+				34C78EB523C4FDC2008C30D8 /* RPS: Ultimate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +64,10 @@
 			children = (
 				34C78EB823C4FDC2008C30D8 /* AppDelegate.swift */,
 				34C78EBA23C4FDC2008C30D8 /* SceneDelegate.swift */,
-				34C78EBC23C4FDC2008C30D8 /* ViewController.swift */,
+				345B093323C669B800B4E03A /* MenuViewController.swift */,
+				34D361F623C67757001E0BDC /* ModesViewController.swift */,
+				34C78EBC23C4FDC2008C30D8 /* GameViewController.swift */,
+				3495E68123CB496A0023C7FC /* SummaryViewController.swift */,
 				34C78EBE23C4FDC2008C30D8 /* Main.storyboard */,
 				34C78EC123C4FDC3008C30D8 /* Assets.xcassets */,
 				34C78EC323C4FDC3008C30D8 /* LaunchScreen.storyboard */,
@@ -84,7 +93,7 @@
 			);
 			name = RPS;
 			productName = RPS;
-			productReference = 34C78EB523C4FDC2008C30D8 /* RPS.app */;
+			productReference = 34C78EB523C4FDC2008C30D8 /* RPS: Ultimate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C78EBD23C4FDC2008C30D8 /* ViewController.swift in Sources */,
+				34C78EBD23C4FDC2008C30D8 /* GameViewController.swift in Sources */,
 				34C78EB923C4FDC2008C30D8 /* AppDelegate.swift in Sources */,
 				34C78EBB23C4FDC2008C30D8 /* SceneDelegate.swift in Sources */,
+				34D361F723C67757001E0BDC /* ModesViewController.swift in Sources */,
+				345B093423C669B800B4E03A /* MenuViewController.swift in Sources */,
+				3495E68223CB496A0023C7FC /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +299,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7W2542538;
 				INFOPLIST_FILE = RPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.drmyy.RPS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "RPS: Ultimate";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,12 +318,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7W2542538;
 				INFOPLIST_FILE = RPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.drmyy.RPS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "RPS: Ultimate";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
