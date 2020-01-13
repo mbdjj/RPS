@@ -70,6 +70,12 @@ class SummaryViewController: UIViewController {
 
         // exclude some activity types from the list (optional)
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        
+        if let popoverPresentationController = activityViewController.popoverPresentationController {
+             popoverPresentationController.sourceView = self.view
+            popoverPresentationController.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 0, height: 0)
+             popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0) //Removes arrow as I dont want it
+        }
 
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
