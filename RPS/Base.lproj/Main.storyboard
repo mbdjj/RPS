@@ -182,20 +182,58 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-4U-ikG">
+                                <rect key="frame" x="309" y="712" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fe5-Tx-mwE"/>
+                                    <constraint firstAttribute="width" constant="50" id="kZ9-yw-Zqt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="EYb-4Y-FGW" eventType="touchUpInside" id="tfc-Xi-mam"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFT-KQ-GBW">
+                                <rect key="frame" x="16" y="712" width="277" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hA9-6l-kKt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <state key="normal" title="Back to Menu">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToMenuButtonPressed:" destination="EYb-4Y-FGW" eventType="touchUpInside" id="kKw-zA-Yxc"/>
+                                    <segue destination="84H-eV-JDd" kind="unwind" identifier="goToModesFromSummary" animates="NO" unwindAction="unwindToModesViewControllerWithSegue:" id="Epc-DX-3RN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Vr-xP-LcY" firstAttribute="trailing" secondItem="C5j-ct-MoF" secondAttribute="trailing" id="4rY-le-Ybb"/>
                             <constraint firstItem="5Vr-xP-LcY" firstAttribute="trailing" secondItem="5pf-Xa-uy6" secondAttribute="trailing" constant="16" id="GIA-AV-Ig7"/>
                             <constraint firstItem="C5j-ct-MoF" firstAttribute="leading" secondItem="5Vr-xP-LcY" secondAttribute="leading" id="IAC-ms-zqH"/>
+                            <constraint firstItem="5Vr-xP-LcY" firstAttribute="bottom" secondItem="CQT-4U-ikG" secondAttribute="bottom" constant="16" id="Qyf-l3-eY5"/>
                             <constraint firstItem="C5j-ct-MoF" firstAttribute="top" secondItem="5Vr-xP-LcY" secondAttribute="top" constant="16" id="V2m-9E-6M8"/>
+                            <constraint firstItem="CQT-4U-ikG" firstAttribute="leading" secondItem="NFT-KQ-GBW" secondAttribute="trailing" constant="16" id="ZEB-1i-IAD"/>
+                            <constraint firstItem="NFT-KQ-GBW" firstAttribute="leading" secondItem="5Vr-xP-LcY" secondAttribute="leading" constant="16" id="aHf-GE-gzG"/>
                             <constraint firstItem="5pf-Xa-uy6" firstAttribute="leading" secondItem="5Vr-xP-LcY" secondAttribute="leading" constant="16" id="qLp-R5-Ymh"/>
+                            <constraint firstItem="5Vr-xP-LcY" firstAttribute="bottom" secondItem="NFT-KQ-GBW" secondAttribute="bottom" constant="16" id="rov-ov-hFT"/>
                             <constraint firstItem="5pf-Xa-uy6" firstAttribute="top" secondItem="C5j-ct-MoF" secondAttribute="bottom" constant="32" id="vAn-Gn-Gxg"/>
+                            <constraint firstItem="5Vr-xP-LcY" firstAttribute="trailing" secondItem="CQT-4U-ikG" secondAttribute="trailing" constant="16" id="xSy-EQ-f4N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Vr-xP-LcY"/>
                     </view>
                     <connections>
+                        <outlet property="backToMenuButton" destination="NFT-KQ-GBW" id="OZg-hw-bue"/>
                         <outlet property="pointsLabel" destination="C5j-ct-MoF" id="RuP-P0-zKe"/>
+                        <outlet property="shareButton" destination="CQT-4U-ikG" id="3Yn-ey-RQr"/>
                         <outlet property="whoWinsLabel" destination="5pf-Xa-uy6" id="JgZ-qh-DKa"/>
                     </connections>
                 </viewController>
@@ -434,6 +472,7 @@
         <image name="rock1" width="1024" height="1024"/>
         <image name="rpsLogo" width="1074" height="682"/>
         <image name="scissors1" width="1024" height="1024"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
         <image name="testImage" width="1024" height="1024"/>
     </resources>
 </document>

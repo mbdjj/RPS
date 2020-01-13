@@ -69,12 +69,15 @@ class ModesViewController: UIViewController {
                 } else if self.mode == "to3" {
                     self.transitionView.center = self.to3Button.center
                 }
-                self.to3Button.alpha = 1
-                self.endlessButton.alpha = 1
-                self.gameModesLabel.alpha = 1
-                self.backButton.alpha = 1
             }, completion: { (_) in
-                self.transitionView.alpha = 0
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.to3Button.alpha = 1
+                    self.endlessButton.alpha = 1
+                    self.gameModesLabel.alpha = 1
+                    self.backButton.alpha = 1
+                }, completion: { (_) in
+                    self.transitionView.alpha = 0
+                })
             })
         }
     }
