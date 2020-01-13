@@ -17,6 +17,7 @@ class ModesViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     var mode = ""
+    var modeChosen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +49,33 @@ class ModesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        endlessButton.alpha = 1
-        to3Button.alpha = 1
-        
-        self.view.bringSubviewToFront(endlessButton)
-        
-        UIView.animate(withDuration: 0.3) {
-            self.gameModesLabel.alpha = 1
-            self.backButton.alpha = 1
-            self.endlessButton.transform = .identity
-            self.to3Button.transform = .identity
+        if !modeChosen {
+            endlessButton.alpha = 1
+            to3Button.alpha = 1
+            
+            self.view.bringSubviewToFront(endlessButton)
+            
+            UIView.animate(withDuration: 0.3) {
+                self.gameModesLabel.alpha = 1
+                self.backButton.alpha = 1
+                self.endlessButton.transform = .identity
+                self.to3Button.transform = .identity
+            }
+        } else {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.transitionView.transform = .identity
+                if self.mode == "endless" {
+                    self.transitionView.center = self.endlessButton.center
+                } else if self.mode == "to3" {
+                    self.transitionView.center = self.to3Button.center
+                }
+                self.to3Button.alpha = 1
+                self.endlessButton.alpha = 1
+                self.gameModesLabel.alpha = 1
+                self.backButton.alpha = 1
+            }, completion: { (_) in
+                self.transitionView.alpha = 0
+            })
         }
     }
     
@@ -115,9 +133,11 @@ class ModesViewController: UIViewController {
                 self.to3Button.alpha = 0
                 self.endlessButton.alpha = 0
                 self.gameModesLabel.alpha = 0
+                self.backButton.alpha = 0
                 self.transitionView.center = self.view.center
                 self.transitionView.transform = CGAffineTransform(scaleX: 28, y: 28)
             }, completion: { (_) in
+                self.modeChosen = true
                 self.performSegue(withIdentifier: "goToGame", sender: nil)
             })
         })
@@ -129,6 +149,10 @@ class ModesViewController: UIViewController {
             let gameVC = segue.destination as! GameViewController
             gameVC.mode = self.mode
         }
+    }
+    
+    @IBAction func unwindToModesViewController(segue: UIStoryboardSegue) {
+        //nothing goes here
     }
     
 }

@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     
+    @IBOutlet weak var pauseButton: UIButton!
+    
     @IBOutlet weak var playerPointsLabel: UILabel!
     @IBOutlet weak var botPointsLabel: UILabel!
     
@@ -67,6 +69,7 @@ class GameViewController: UIViewController {
     
     
     // MARK: - Button Pressed Functions
+    
     @IBAction func rockButtonPressedDown(_ sender: Any) {
         UIView.animate(withDuration: 0.2) {
             self.rockButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
@@ -125,6 +128,11 @@ class GameViewController: UIViewController {
         battleBegin(playerChoice: playerChoice!, botChoice: botChoice!)
     }
     
+    @IBAction func pauseButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "pause", sender: nil)
+    }
+    
+    
     // MARK: - Battle Functions
     
     func battleBegin(playerChoice: Int, botChoice: Int) {
@@ -173,7 +181,7 @@ class GameViewController: UIViewController {
             self.botImageView.alpha = 1
         }, completion: { (_) in
             UIView.animate(withDuration: 0.5, animations: {
-                self.playerImageView.center.y = self.playerImageView.center.y - 150
+                self.playerImageView.center.y = self.playerImageView.center.y - 125
                 self.playerImageView.center.x = self.view.center.x
             }, completion: { (_) in
                 UIView.animate(withDuration: 0.3, animations: {
@@ -208,7 +216,7 @@ class GameViewController: UIViewController {
             self.botImageView.alpha = 1
         }, completion: { (_) in
             UIView.animate(withDuration: 0.5, animations: {
-                self.botImageView.center.y = self.botImageView.center.y + 150
+                self.botImageView.center.y = self.botImageView.center.y + 125
                 self.botImageView.center.x = self.view.center.x
             }, completion: { (_) in
                 UIView.animate(withDuration: 0.3, animations: {
